@@ -1,0 +1,62 @@
+ul li a{
+    margin-right: 20px;
+}
+
+.nav-collapse .li {
+    list-style-type: none;
+}
+
+.modal-header {
+    border-bottom: none;
+  }
+  
+  .modal-dialog {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .modal-backdrop {
+  background-color:#fff;
+    opacity:1!important;
+      border: 10px solid rgba(136, 136, 136, .4);
+  }
+  
+  .modal-content {
+    height: auto;
+    min-height: 100%;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+  }
+  
+  .modal-body {
+    text-align: center;
+  }
+  
+  .modal-body form {
+    margin: 0 auto;
+    float: none;
+    width: 300px;
+  }
+  
+  .modal-content .close {
+    opacity: 1;
+    font-size: 30px;
+  }
+
+  .search_fld {
+    float: left;
+    margin-right: 10px;
+  }
+
+  #detail_headers {
+    text-decoration-color: #ff6200;
+    font-size: 18px;
+  }
+
+.chart {
+  width: 500px;
+  height: 500px;
+ }

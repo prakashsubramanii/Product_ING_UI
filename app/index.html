@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>ING Products</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="app.css" /> 
+    <link rel="stylesheet" href="vendors/css/jquery.dataTables.min.css"/>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script> <!-- Routing Purpose -->
+    <script src="vendors/js/d3.js"></script> <!-- Charts and Graphs -->
+    <script src="vendors/js/angular-charts.min.js"></script> <!-- Charts and Graphs-->
+    <script src="vendors/js/ui-bootstrap-tpls-2.5.0.min.js"></script> <!-- Modal Window-->
+    <script src="vendors/js/jquery.min.js"></script> 
+    <script src="vendors/js/bootstrap.min.js"></script>
+    <script src="vendors/js/dirPagination.js"></script> <!-- Client Side Pagination -->
+    <!-- User Defined Modules -->
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script> 
+    <script src="menu-list/menu-list.module.js"></script>
+    <script src="menu-list/menu-list.component.js"></script>
+    <script src="policy-list/policy-list.module.js"></script>
+    <script src="policy-list/policy-list.services.js"></script>
+  </head>
+  <body>
+          <div class="container">
+              <div ng-view></div>
+          </div>
+    </body>
+</html>
+
+
+<!--##ff6200 Color Code--> 

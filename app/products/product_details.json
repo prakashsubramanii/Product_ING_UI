@@ -1,0 +1,25 @@
+[{
+    "productGroup": "Mortgage",
+    "otherProducts": ["Bank saving mortgage", "Interest Only", "Annuity"],
+    "productName": "Linear",
+    "details": {
+        "key": "value"
+    }
+},
+{
+    "productGroup": "Payments",
+    "otherProducts": ["Bank saving mortgage", "Interest Only", "Annuity"],
+    "productName": "Linear",
+    "details": {
+        "key": "value"
+    }
+},
+{
+    "productGroup": "Savings",
+    "otherProducts": ["Bank saving mortgage", "Interest Only", "Annuity"],
+    "productName": "Linear",
+    "details": {
+        "key": "value"
+    }
+}
+]
