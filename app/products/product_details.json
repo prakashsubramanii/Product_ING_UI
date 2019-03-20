@@ -1,25 +1,12 @@
-[{
-    "productGroup": "Mortgage",
-    "otherProducts": ["Bank saving mortgage", "Interest Only", "Annuity"],
-    "productName": "Linear",
-    "details": {
-        "key": "value"
-    }
-},
 {
-    "productGroup": "Payments",
+    "productGroup": "Sparen",
     "otherProducts": ["Bank saving mortgage", "Interest Only", "Annuity"],
     "productName": "Linear",
-    "details": {
-        "key": "value"
-    }
-},
-{
-    "productGroup": "Savings",
-    "otherProducts": ["Bank saving mortgage", "Interest Only", "Annuity"],
-    "productName": "Linear",
-    "details": {
-        "key": "value"
-    }
+    "depositAndWithdrawal":"altijd mogelijk",
+    "duration":"onbepaald",
+    "interestRate":"onbepaald",
+    "maxInvestment":"geen",
+    "minInvestment":"0",
+    "percentage":"30",
+    "special":"Doelsparen optie"
 }
-]

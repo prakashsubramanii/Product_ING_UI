@@ -20,10 +20,14 @@
         expect(policyListService.id).toBe(5);
       })
 
-      //check if the viewDetails method is defined
+      //check if the getAllProducts method is defined
       it('all product list should be defined', function(){
         expect(policyListService.getAllProducts).toBeDefined();
       })
 
+      //check if the getAllProducts method is defined
+      it('all product list should be defined', function(){
+        expect(policyListService.getProductDetails).toBeDefined();
+      })
       
     });

@@ -12,18 +12,18 @@ angular.module('policyList').factory('policyListService', ['$http', '$window', '
       return $http({
         method: 'GET',
         type: 'JSON',
-        url: 'products/product_groups.json'
+        url: $rootScope.config+'Produkten-ING/api/products/' 
       });
     }
 
-    policyListService.getProductDetails = function () {
+    policyListService.getProductDetails = function (productGroup, productName) {
       // console.log(config.url);
       return $http({
         method: 'GET',
         type: 'JSON',
-        url: 'products/product_details.json'
+        url: $rootScope.config+'Produkten-ING/api/product/'+productGroup+'/'+productName
       });
     }
-    
+
     return policyListService;
   }]);

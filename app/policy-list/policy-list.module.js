@@ -11,36 +11,13 @@ policyList.controller('policyListController', ['$http', '$scope', '$window', '$r
             current: null
           };
           
-          $scope.items = [{
-            name: 'List 1',
-            sub: [{
-              name: 'Sub 1.1'
-            }, {
-              name: 'Sub 1.2'
-            }]
-          }, {
-            name: 'List 2',
-            sub: [{
-              name: 'Sub 2.1'
-            }]
-          }, {
-            name: 'List 3',
-            sub: [{
-              name: 'Sub 3.1'
-            }, {
-              name: 'Sub 3.2'
-            }, {
-              name: 'Sub 3.3'
-            }]
-          }];
-
         init();
 
         function init() {
 
             $http.get('config.properties').then(function (response) {
+
                 $rootScope.config = response.data.url;
-                console.log($rootScope.config);
 
                 policyListService.getAllProducts()
                     .then(function (success) {
@@ -52,25 +29,26 @@ policyList.controller('policyListController', ['$http', '$scope', '$window', '$r
                         });
             });
         }
-
-        $scope.changeProducts = function(){
-            console.log('Product is changing');
-        }
         
-        $scope.open = function (policyObj) {
-            $scope.policy = policyObj;
+        $scope.open = function (productGroup, productName) {
 
-            policyListService.viewDetails(policyObj.id).then(function (success) {
+
+            $scope.productGroup = productGroup;
+            $scope.productName = productName;
+
+
+            policyListService.getProductDetails(productGroup,productName).then(function (success) {
                 console.log(JSON.stringify(success.data));
 
-                $scope.policyDetails = success.data;
-                $scope.terms_conditions = [];
+                $scope.productDetails = success.data;
+                $scope.prodDetails = [];
 
-                for (var key in $scope.policyDetails.terms) {
-                    $scope.terms_conditions.push({ 'key': key, 'value': $scope.policyDetails.terms[key] });
+                for (var key in $scope.productDetails) {
+                    if ( key !== undefined && key !== null && key !== "productGroup" && key !== "otherProducts" && key !== "productName")
+                            $scope.prodDetails.push({ 'key': key, 'value': $scope.productDetails[key] });
                 }
 
-                console.log(JSON.stringify($scope.terms_conditions));
+                console.log(JSON.stringify($scope.prodDetails));
 
                 var modalInstance = $uibModal.open({
                     templateUrl: "policy-list/modalContent.html",
@@ -89,3 +67,10 @@ policyList.controller('policyListController', ['$http', '$scope', '$window', '$r
         };
     }]);
 
+    policyList.controller('ModalContentCtrl', function ($scope, $uibModalInstance, policyListService) {
+
+        $scope.back = function () {
+            $uibModalInstance.dismiss();
+        }
+      
+    });

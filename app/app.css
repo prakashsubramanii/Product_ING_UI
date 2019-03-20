@@ -1,5 +1,14 @@
+ul {
+  list-style-type: none;
+}
+
 ul li a{
     margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+li {
+  padding-top: 20px;
 }
 
 .nav-collapse .li {
@@ -59,4 +68,10 @@ ul li a{
 .chart {
   width: 500px;
   height: 500px;
+ }
+
+ #otherProducts {
+  border: 0.1px solid;
+  /* padding: 25px;
+  margin: 25px; */
  }

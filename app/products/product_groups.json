@@ -1,12 +1,22 @@
-[
-	{
-		"productGroup": "Mortgage",
-		"products": ["Bank saving mortgage","Interest Only","Annuity","Linear"]
-	},{
-		"productGroup": "Payments",
-		"products": ["Payments Account","Debit card","Quarterly Limit","Contionously Limit"]
-	},{
-		"productGroup": "Savings",
-		"products": ["Orange Savings Account","Child Savings Account","UNICEF Savings Account","Bonus Interest Account","Savings Deposit","Green Savings Account"]
-	}
-]
+[{
+    "productGroup": "Mortgage",
+    "products": [{
+        "name": "Bank saving mortgage"
+    }, {
+        "name": "Interest Only"
+    }]
+}, {
+    "productGroup": "Payments",
+    "products": [{
+        "name": "Payments Account"
+    }]
+}, {
+    "productGroup": "Savings",
+    "products": [{
+        "name": "Orange Savings Account"
+    }, {
+        "name": "Child Savings Account"
+    }, {
+        "name": "UNICEF Savings Account"
+    }]
+}]
