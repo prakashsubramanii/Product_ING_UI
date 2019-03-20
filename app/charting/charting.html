@@ -1,6 +1,7 @@
 <html>
 <menu-list></menu-list>
 <body>
+     <p><font color="2980b9">Note: Graphical representaion is a mock up data</font></p>
     <!-- 'pie', 'bar', 'line', 'point', 'area' -->
     <div
         data-ac-chart="'bar'" 
@@ -16,20 +17,20 @@
    </div> -->
    
  <div class="container">
-     <h3>
+     <!-- <h3>
           <font color="ff6200">Data Monitoring</font>
-     </h3>
+     </h3> -->
      <table class="table"> 
              <thead>
-                 <tr ng-show="productgroups">
+                 <tr ng-show="dataMonitoring">
                      <th>Product Groups</th>
-                     <th>Product Name</th>
+                     <th>Count</th>
                  </tr>
              </thead>
              <tbody>
-                 <tr ng-repeat="product in productgroups"> <!--(!!product.productGroup || undefined) && product.productGroup-->
-                     <td>{{product.productGroup}}</td>
-                     <td>{{product.productGroup}}</td>
+                 <tr ng-repeat="data in dataMonitoring"> <!--(!!product.productGroup || undefined) && product.productGroup-->
+                     <td>{{data.key}}</td>
+                     <td>{{data.value}}</td>
                  </tr>
              </tbody>
      </table>
