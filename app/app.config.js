@@ -13,7 +13,8 @@ angular.
           templateUrl: 'policy-list/product-list.template.html'
         }).
         when('/charts', {
-          template: '<h2>Analytics</h2>'
+          controller: 'chartListController',
+          templateUrl: 'charting/charting.html'
         }).
         otherwise('/data');
     }

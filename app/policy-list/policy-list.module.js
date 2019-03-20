@@ -69,8 +69,10 @@ policyList.controller('policyListController', ['$http', '$scope', '$window', '$r
 
     policyList.controller('ModalContentCtrl', function ($scope, $uibModalInstance, policyListService) {
 
-        $scope.back = function () {
+        $scope.cancel = function () {
+
+            $uibModalInstance.close("Ok");
             $uibModalInstance.dismiss();
         }
-      
+        
     });

@@ -1,6 +1,6 @@
 'use strict';
 
-var myApp = angular.module('myApp',['ngRoute','angularUtils.directives.dirPagination','menuList','policyList']);
+var myApp = angular.module('myApp',['ngRoute','angularUtils.directives.dirPagination','menuList','policyList','chartList']);
 
 myApp.controller('appController', function appController($scope){
 
