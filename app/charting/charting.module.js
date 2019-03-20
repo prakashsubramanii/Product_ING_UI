@@ -2,15 +2,15 @@
 
 var chartList = angular.module('chartList',[]);
 
-chartList.controller('chartListController', ['$http','$scope', '$rootScope', '$location',
-    function ($http, $scope, $rootScope, $location ) {
+chartList.controller('chartListController', ['$http','$scope', '$rootScope', '$location','chartListService',
+    function ($http, $scope, $rootScope, $location,chartListService ) {
         
     $scope.config = {
         title: 'Monitoring',
         tooltips: true,
         labels: false,
         mouseover: function() {},
-        mouseout: function() {},
+        mouseout: function() {}, 
         click: function() {},
         legend: {
           display: true,
@@ -62,9 +62,6 @@ chartList.controller('chartListController', ['$http','$scope', '$rootScope', '$l
       $scope.data = {
         series: ['Count'],
         data: [{
-          x: "overview",
-          y: [100]
-        }, {
           x: "savings",
           y: [50]
         }, {
