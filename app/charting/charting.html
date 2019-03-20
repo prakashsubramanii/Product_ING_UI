@@ -14,5 +14,26 @@
         data-ac-config="config_current" 
         class="chart">
    </div> -->
+   
+ <div class="container">
+     <h3>
+          <font color="ff6200">Data Monitoring</font>
+     </h3>
+     <table class="table"> 
+             <thead>
+                 <tr ng-show="productgroups">
+                     <th>Product Groups</th>
+                     <th>Product Name</th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <tr ng-repeat="product in productgroups"> <!--(!!product.productGroup || undefined) && product.productGroup-->
+                     <td>{{product.productGroup}}</td>
+                     <td>{{product.productGroup}}</td>
+                 </tr>
+             </tbody>
+     </table>
+
+ </div>
 </body>
 </html>

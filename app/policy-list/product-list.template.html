@@ -11,7 +11,7 @@
                 <div class="card-header" role="tab">
                     <li ng-repeat="item in productgroups" ng-click="accordion.current = item.productGroupName">
                         <h3>
-                            <font color="ff6200">{{item.productGroupName}}</font>
+                            <font color="ff6200">{{item.productGroupName}}</font> {{ item.products.length}}
                         </h3><i class="fas fa-angle-down rotate-icon"></i>
                         <ul ng-show="accordion.current == item.productGroupName">
                             <h4>

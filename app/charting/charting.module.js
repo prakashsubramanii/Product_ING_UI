@@ -19,19 +19,6 @@ chartList.controller('chartListController', ['$http','$scope', '$rootScope', '$l
         }
       };
 
-    //   $scope.config_current = {
-    //     title: 'Current Trends',
-    //     tooltips: true,
-    //     labels: false,
-    //     mouseover: function() {},
-    //     mouseout: function() {},
-    //     click: function() {},
-    //     legend: {
-    //       display: true,
-    //       //could be 'left, right'
-    //       position: 'left'
-    //     }
-    //   };
 
       var mockData = {
         "overview": 100,
@@ -40,42 +27,54 @@ chartList.controller('chartListController', ['$http','$scope', '$rootScope', '$l
         "else": 25
     }
 
-    var mobj = {};
-    mobj["series"] = ['Count'];
-    mobj["data"] = [];
+    $scope.dataMonitoring = [];
 
-      for ( var key in mockData){
+    for (var key in mockData) {
+      if ( key !== undefined && key !== null )
+              $scope.dataMonitoring.push({ 'key': key, 'value': mockData[key] });
+  }
 
-        var dataObj = {};
-        var arr = [];
+  console.log(JSON.stringify($scope.dataMonitoring));
+
+    // var mobj = {};
+    // mobj["series"] = ['Count'];
+    // mobj["data"] = [];
+
+    //   for ( var key in mockData){
+
+    //     var dataObj = {};
+    //     var arr = [];
+
+    //     console.log(key);
+    //     console.log(mockData.key);
   
-        dataObj["x"] = key;
-        dataObj["y"] = arr.push(mockData[key]);
-        // console.log(JSON.stringify(dataObj));
+    //     dataObj["x"] = key;
+    //     dataObj["y"] = arr.push(mockData.key);
+    //     console.log(JSON.stringify(dataObj));
 
-        mobj["data"].push(dataObj);
+    //     mobj["data"].push(dataObj);
     
-      }
+    //   }
       
 
-      $scope.data = mobj;
+    //   $scope.data = mobj;
     
-      // $scope.data = {
-      //   series: ['Count'],
-      //   data: [{
-      //     x: "Product 1",
-      //     y: [100]
-      //   }, {
-      //     x: "Product 2",
-      //     y: [300]
-      //   }, {
-      //     x: "Product 3",
-      //     y: [351]
-      //   }, {
-      //     x: "Product 4",
-      //     y: [54]
-      //   }]
-      // };
+      $scope.data = {
+        series: ['Count'],
+        data: [{
+          x: "overview",
+          y: [100]
+        }, {
+          x: "savings",
+          y: [50]
+        }, {
+          x: "mortgage",
+          y: [25]
+        }, {
+          x: "else",
+          y: [25]
+        }]
+      };
 
 
       // $scope.data_current = {
