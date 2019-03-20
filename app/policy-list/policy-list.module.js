@@ -43,8 +43,16 @@ policyList.controller('policyListController', ['$http', '$scope', '$window', '$r
                 $scope.productDetails = success.data;
                 $scope.prodDetails = [];
 
+                console.log($scope.productDetails["interestRate"] );
+
+                if ( $scope.productDetails["interestRate"] === null || $scope.productDetails["interestRate"] === undefined )
+                {
+                  alert(' No Product Details to View ')
+                  return;
+                }                  
+
                 for (var key in $scope.productDetails) {
-                    if ( key !== undefined && key !== null && key !== "productGroup" && key !== "otherProducts" && key !== "productName")
+                    if ( key !== undefined && key !== null && key !== "productGroup" && key !== "otherProducts" && key !== "productName" && key !== "id")
                             $scope.prodDetails.push({ 'key': key, 'value': $scope.productDetails[key] });
                 }
 
